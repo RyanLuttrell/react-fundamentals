@@ -16,7 +16,6 @@ import '../box-styles.css'
 
 const Box = ({className = '', style, size, ...otherProps}) => {
 
-  const sizeClassName = size ? `box--${size}`: '';
 
   return(
     <>
