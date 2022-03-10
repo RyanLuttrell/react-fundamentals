@@ -8,14 +8,20 @@
   <script src="https://unpkg.com/@babel/standalone@7.12.4/babel.js"></script>
   <script type="text/babel">
 
-    const message = (content) => {
+    const message = (props) => {
       return (
-        <div className="message">{content.children}</div>
+        <div className="message">{props.children}</div>
       )
     }
+
+   const helloElement = React.createElement(message, {children: "Hello World"});
+   const goodbyeElement = React.createElement(message, {children: "Goodbye World"});
+
+
     const element = (
       <div className="container">
-        {message({children: 'Hello World'})} {message({children: 'Goodbye World'})}
+        {helloElement}
+        {goodbyeElement}
       </div>
     )
 
